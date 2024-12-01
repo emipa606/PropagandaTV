@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Propaganda TV (Continued)</name>
+  <packageId>Mlie.PropagandaTV</packageId>
+  <author>Jelly</author>
+  <url>https://github.com/emipa606/PropagandaTV</url>
+  <supportedVersions>
+    <li>1.3</li>
+    <li>1.4</li>
+    <li>1.5</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>Ludeon.Rimworld.Ideology</packageId>
+      <displayName>Rimworld Ideology</displayName>
+      <downloadUrl>https://store.steampowered.com/app/1392840/RimWorld__Ideology/</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.Rimworld.Ideology</li>
+  </loadAfter>
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of Jellys mod https://steamcommunity.com/sharedfiles/filedetails/?id=2626812928
+
+[img]https://i.imgur.com/pufA0kM.png[/img]
+
+[table]
+    [tr][td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td] [td][url=https://github.com/emipa606/PropagandaTV][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/h5VwTNL.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+[h1]TLDR:[/h1]
+[List]
+[*]Passively reduces a newly recruited pawns certainty in their current Ideology if it is not the primary Ideology of the colony. (This will typically be the one you chose upon creation of your playthrough)
+[*] Does not effect prisoners in Prison Cells.
+[*] If a pawn already believes in the Colony's Primary Ideology, Reinforces belief in the primary colony's Ideology. 
+[*] Small short term mood buff (+5 for 5hrs) 
+[*] If Certainty reaches a low enough point, pawn will automatically convert to the colony's primary Ideology. 
+[*] Highly Compatible since it works via adding a comp to a powered Radio or TV. 
+[/List]
+
+[img]https://i.imgur.com/b6KCbON.png[/img]
+
+Brainwash your new recruits!
+
+This mod is inspired by/heavily based on Pelador's Mod TVforPrison (and Mlie now that Pelador has retired from modding.
+
+[h1]What does it do?[/h1]
+
+If a colonist is healthy, awake, not dead, burning, generally of good mind and body, and within a range of a Television or Radio, their beliefs start to waiver. As their belief in their ideology gets lower and lower, the effect lessens but can still convert the colonist to your primary Ideology. (This generally will be the one you've picked at the start of your game, unless something has gone horribly wrong ;) ) 
+
+Things that effect the function of this mod:
+The colonist must be alive and awake, able to see and hear.
+Television and Radio type have different radius and effect factors! 
+Be within a certain radius of the television or radio. 
+More effective with colonists mood being higher.
+
+Save Game compatible. Add or remove anytime.
+
+No research needed.
+
+Functionality can be added to modded tv's or *radio's. 
+
+[h1]How [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2624007189]Rimpropaganda[/url] is different:[/h1]
+PebbleCat made a very similar mod around the same time, that takes a more active approach. Be sure to check it out!
+
+[quote=PebbleCat]Just wanted to add some more info about the differences from RimPropaganda.
+It adds propaganda art as well, and requires TV to be set to a propaganda.
+It requires the pawns be watching a TV, not just in range.
+RimPropaganda is not affected by colonist mood.
+It causes a mood debuff for pawns being converted.
+It also reinforces existing beliefs for pawns already converted.[/quote]
+
+
+[img]https://i.imgur.com/GNHzLmd.png[/img]
+
+Now has basic support for Radios. The radio must have "radio" in the description to be considered a valid radio.  
+Compatible with TVforPrison!
+Now compatible with WallStuff!
+Place after RimFlix.
+
+[h1]Supported Mods[/h1]
+[List]
+[*]Wall Stuff
+[List]
+[*] Wall Mounted Hifi
+[*] Small Wallscreen Television
+[*] Wallscreen Television
+[/List]
+[*]Vanilla Furniture Expanded
+[List]
+[*]Ultrascreen Television
+[*]Industrial Radio
+[*]Long Wave Radio
+[/List]
+[/List]
+[img]https://i.imgur.com/DPSE2aV.png[/img]
+
+It's probably gonna need balancing. Feedback is STRONGLY encouraged. 
+Here's how it currently figures out how much to reduce/gain.
+
+[h1]Current Balance.[/h1]
+Currently this is set to run every 1000 ticks, approx every 16 seconds on normal speed. 
+There are several factors effecting the final reduction/gaining of certainty, Tech Level, Mood, Sight, Hearing.
+I'll break it down the best I can explain: 
+You start with a factor of 1. (Since certainty is 0-1)
+Mood * TV Effect Factor - multiplied by sight, then hearing - Multiplied by Tech Level
+
+Then the final calculation: Certainty divided by 10, multiplied by the result of the above calculations. 
+
+Also, because as certainty falls, the math gets into smaller and smaller numbers, it makes the final certainty reduction take longer. 
+
+After all these calculations, it compares the result to .25 and whichever is smaller is used. This means you will NEVER get more than a .25 reduction in certainty. This will almost always be smaller than .25 anyway but the .25 limit is a sanity check. It sounds like a good chunk at a time, but remember, a pawn has a gain in their ideology passively due to mood, so we needed to compensate for when they weren't hearing the Propaganda. 
+
+[img]https://i.imgur.com/V1bOs7X.png[/img]
+
+(CC BY-NC-SA 4.0)
+Credit to Pelador and Mlie for creating and maintaining respectively.
+
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
+[/list] 
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/][img]https://img.shields.io/github/v/release/emipa606/PropagandaTV?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags:  propaganda,  ideology conversion</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
+</ModMetaData>
