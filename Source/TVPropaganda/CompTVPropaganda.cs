@@ -7,19 +7,19 @@ namespace TVPropaganda;
 
 public class CompTVPropaganda : ThingComp
 {
-    public CompProperties_TVPropaganda Props => (CompProperties_TVPropaganda)props;
+    private CompProperties_TVPropaganda Props => (CompProperties_TVPropaganda)props;
 
-    public Building TVP => parent as Building;
+    private Building Tvp => parent as Building;
 
     public override void CompTick()
     {
         base.CompTick();
-        if (Find.TickManager.TicksGame % 1000 != 0 || !IsFunctional(TVP))
+        if (Find.TickManager.TicksGame % 1000 != 0 || !isFunctional(Tvp))
         {
             return;
         }
 
-        var list = GenRadial.RadialCellsAround(TVP.Position, Math.Min(20, Props.TVeffectRadius), true).ToList();
+        var list = GenRadial.RadialCellsAround(Tvp.Position, Math.Min(20, Props.TVeffectRadius), true).ToList();
         if (list.Count <= 0)
         {
             return;
@@ -29,7 +29,7 @@ public class CompTVPropaganda : ThingComp
         {
             try
             {
-                if (!IsValidCell(item, TVP))
+                if (!isValidCell(item, Tvp))
                 {
                     continue;
                 }
@@ -39,7 +39,7 @@ public class CompTVPropaganda : ThingComp
                 // ignored
             }
 
-            var thingList = item.GetThingList(TVP.Map);
+            var thingList = item.GetThingList(Tvp.Map);
             if (thingList.Count <= 0)
             {
                 continue;
@@ -47,7 +47,7 @@ public class CompTVPropaganda : ThingComp
 
             foreach (var thing in thingList)
             {
-                if (thing is not Pawn pawn || !IsValidPawn(pawn) || !HasCertainty(pawn))
+                if (thing is not Pawn pawn || !isValidPawn(pawn) || !hasCertainty(pawn))
                 {
                     continue;
                 }
@@ -82,8 +82,6 @@ public class CompTVPropaganda : ThingComp
                         effectiveness *= 0.8f;
                         break;
                     case TechLevel.Medieval:
-                        effectiveness *= 0.9f;
-                        break;
                     case TechLevel.Spacer:
                         effectiveness *= 0.9f;
                         break;
@@ -110,7 +108,7 @@ public class CompTVPropaganda : ThingComp
                     {
                         Messages.Message("TVPropaganda.willbroken".Translate(pawn.LabelShort),
                             MessageTypeDefOf.NeutralEvent);
-                        var playerIdeology = GetPlayerIdeology();
+                        var playerIdeology = getPlayerIdeology();
                         pawn.ideo.SetIdeo(playerIdeology);
                     }
                     else
@@ -130,23 +128,23 @@ public class CompTVPropaganda : ThingComp
                     pawn.ideo.Debug_ReduceCertainty(-increaseBy);
                 }
 
-                if (TVP.def.description.Contains("radio"))
+                if (Tvp.def.description.Contains("radio"))
                 {
-                    GiveRadioThought(pawn);
+                    giveRadioThought(pawn);
                 }
                 else
                 {
-                    GiveTVThought(pawn);
+                    giveTVThought(pawn);
                 }
             }
         }
     }
 
-    public void GiveTVThought(Pawn pawn)
+    private static void giveTVThought(Pawn pawn)
     {
         try
         {
-            if (pawn == null || pawn.needs?.mood == null)
+            if (pawn?.needs?.mood == null)
             {
                 return;
             }
@@ -163,11 +161,11 @@ public class CompTVPropaganda : ThingComp
         }
     }
 
-    public void GiveRadioThought(Pawn pawn)
+    private static void giveRadioThought(Pawn pawn)
     {
         try
         {
-            if (pawn == null || pawn.needs?.mood == null)
+            if (pawn?.needs?.mood == null)
             {
                 return;
             }
@@ -184,7 +182,7 @@ public class CompTVPropaganda : ThingComp
         }
     }
 
-    public bool HasCertainty(Pawn pawn)
+    private static bool hasCertainty(Pawn pawn)
     {
         try
         {
@@ -198,7 +196,7 @@ public class CompTVPropaganda : ThingComp
         }
     }
 
-    public bool IsFunctional(Building building)
+    private static bool isFunctional(Building building)
     {
         try
         {
@@ -213,12 +211,12 @@ public class CompTVPropaganda : ThingComp
         }
     }
 
-    public bool IsValidCell(IntVec3 cell, Building building)
+    private static bool isValidCell(IntVec3 cell, Building building)
     {
         return cell.InBounds(building.Map);
     }
 
-    public bool IsValidPawn(Pawn pawn)
+    private static bool isValidPawn(Pawn pawn)
     {
         try
         {
@@ -232,7 +230,7 @@ public class CompTVPropaganda : ThingComp
         }
     }
 
-    public static Ideo GetPlayerIdeology()
+    private static Ideo getPlayerIdeology()
     {
         Faction.OfPlayer.ideos.AllIdeos.Where(ideo => Faction.OfPlayer.ideos.PrimaryIdeo.id == ideo.id)
             .TryRandomElement(out var result);

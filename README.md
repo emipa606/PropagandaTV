@@ -1,4 +1,4 @@
-# [Propaganda TV (Continued)]()
+# [Propaganda TV (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3376039632)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -115,4 +115,4 @@ Credit to Pelador and Mlie for creating and maintaining respectively.
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/PropagandaTV?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/) | tags:  propaganda,  ideology conversion
+[![Image](https://img.shields.io/github/v/release/emipa606/PropagandaTV?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3376039632) | tags:  propaganda,  ideology conversion
