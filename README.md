@@ -1,12 +1,12 @@
 # [Propaganda TV (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3376039632)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of Jellys mod https://steamcommunity.com/sharedfiles/filedetails/?id=2626812928
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 # TLDR:
 
@@ -19,7 +19,7 @@ Update of Jellys mod https://steamcommunity.com/sharedfiles/filedetails/?id=2626
 -  Highly Compatible since it works via adding a comp to a powered Radio or TV. 
 [/List]
 
-![Image](https://i.imgur.com/b6KCbON.png)
+![Image](https://img.litet.net/b6KCbON.png)
 
 Brainwash your new recruits!
 
@@ -54,7 +54,7 @@ It causes a mood debuff for pawns being converted.
 It also reinforces existing beliefs for pawns already converted.[/quote]
 
 
-![Image](https://i.imgur.com/GNHzLmd.png)
+![Image](https://img.litet.net/GNHzLmd.png)
 
 Now has basic support for Radios. The radio must have "radio" in the description to be considered a valid radio.  
 Compatible with TVforPrison!
@@ -77,7 +77,7 @@ Place after RimFlix.
 - Long Wave Radio
 [/List]
 [/List]
-![Image](https://i.imgur.com/DPSE2aV.png)
+![Image](https://img.litet.net/DPSE2aV.png)
 
 It's probably gonna need balancing. Feedback is STRONGLY encouraged. 
 Here's how it currently figures out how much to reduce/gain.
@@ -96,18 +96,18 @@ Also, because as certainty falls, the math gets into smaller and smaller numbers
 
 After all these calculations, it compares the result to .25 and whichever is smaller is used. This means you will NEVER get more than a .25 reduction in certainty. This will almost always be smaller than .25 anyway but the .25 limit is a sanity check. It sounds like a good chunk at a time, but remember, a pawn has a gain in their ideology passively due to mood, so we needed to compensate for when they weren't hearing the Propaganda. 
 
-![Image](https://i.imgur.com/V1bOs7X.png)
+![Image](https://img.litet.net/V1bOs7X.png)
 
 (CC BY-NC-SA 4.0)
 Credit to Pelador and Mlie for creating and maintaining respectively.
 
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
@@ -115,4 +115,4 @@ Credit to Pelador and Mlie for creating and maintaining respectively.
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/PropagandaTV?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3376039632) | tags:  propaganda,  ideology conversion
+[![Image](https://img.shields.io/github/v/release/emipa606/PropagandaTV?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3376039632) | ideology conversion, propaganda

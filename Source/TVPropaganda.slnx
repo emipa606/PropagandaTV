@@ -3,4 +3,23 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="TVPropaganda/TVPropaganda.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/TVLanguage.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Patches/">
+    <File Path="../1.7/Patches/Buildings_Furniture.xml" />
+    <File Path="../1.7/Patches/Buildings_Joy.xml" />
+    <File Path="../1.7/Patches/Patch_TV_Vanilla.xml" />
+    <File Path="../1.7/Patches/Patch_UltrascreenTV.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Thoughts/">
+    <File Path="../1.7/Defs/Thoughts/Defs_RadioThought.xml" />
+    <File Path="../1.7/Defs/Thoughts/Defs_TVThought.xml" />
+  </Folder>
 </Solution>
